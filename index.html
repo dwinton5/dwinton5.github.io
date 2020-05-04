@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Latitude</title>
+  <title>Data Analytics Boot Camp Final Project</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css">
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -19,18 +19,32 @@
     .navbar-brand {
         background-color: rgba(39, 184, 169, 0.692) ;
     }
+    .bg-img {
+        /* The image used */
+        background-image: url("../Images/Index_headerNEW2.png");
+
+        min-height: 200px;
+
+        /* Center and s
+        cale the image nicely */
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        /* Needed to position the navbar */
+        position: sticky;
+    }
     
     h1 {
         margin-bottom: 15px;
-        font-family: Georgia;
-        font-weight: bold;
-        color:rgba(39, 184, 169, 0.692);
+        font-family: Segoe UI;
+        font-weight: normal;
+        color:rgba(113, 114, 114, 0.993);
     }
     h2 {
         margin-bottom: 15px;
-        font-family: Georgia;
-        font-weight: bold;
-        color:rgba(39, 184, 169, 0.692);
+        font-family: Segoe UI;
+        font-weight: normal;
+        color:rgba(113, 114, 114, 0.993);
     }
     body {
         background-color: white;
@@ -51,82 +65,218 @@
 </head>
 
 <body>
+  <!-- <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #444444;"> -->
   <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
-  <div class="container-fluid">
-    <a class="navbar-brand active" href="index.html">Latitude</a>
+    <div class="container-fluid">
+      <!-- <a class="navbar-brand active fluid" href="index.html">
+        <img src="../Images/Index_headerNEW1.png" alt="">
+      </a> -->
+    <!-- <a class="navbar-brand active" href="index.html">Data Analytics Boot Camp Final Project</a> -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="data_analysis.html">Data Analysis</a>
+        </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Plots</a>
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Machine Learning Models</a>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="max_temp.html">Max Temperature</a>
-            <a class="dropdown-item" href="humidity.html">Humidity</a>
-            <a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
-            <a class="dropdown-item" href="wind_speed.html">Wind Speed</a>
+            <a class="dropdown-item" href="neural_network.html">Neural Network</a>
+            <a class="dropdown-item" href="random_forest.html">Random Forest</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Model Code</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="neural_network_code.html">Neural Network</a>
+            <a class="dropdown-item" href="random_forest_code.html">Random Forest</a>
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="comparison.html">Comparison</a>
+          <a class="nav-link" href="model_comparison.html">Model Evaluation</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="data.html">Data</a>
+          <a class="nav-link" href="about_us.html">About us</a>
         </li>
       </ul>
     </div>
   </nav>
-  <br>
-  <div class="container-fluid">
-    <div class="row">
-    <div class="col-lg-8 col-sm-12 col-xs-12 padding">
-      <h1>Summary: Latitude vs. X</h1>
-      <div>
-        <hr class="my-4">
-      </div>
-      <div class="image-wrapper float-left pr-3">
-        <img src="../Images/LatVsMaxTemp.png" alt="">
-      </div>
-      <div class="single-post-content-wrapper p-3">
-          This project was focused on analyzing weather patterns as you get closer to the equator using data, from more than 500 cities, that was pulled from OpenWeatherMap API.
-          <br><br>
-          Matplotlib was then used to plot weather factors in relation to the latitude of the varius cities.  These factors included: temperature, humidity, cloudiness and wind speed. The source data, and the visualizations created from the data, are displayed, along with explanations of any noticeable trends or correlations.
-      </div>
-     </div>
-     <div class="col-lg-4 col-sm-12 col-xs-12 padding">
-      <h1>Visualizations</h1>
-      <div>
-      <hr class="my-4">
-      </div>
-      <div class="card-group">
-         <div class="card">
-         <a href="max_temp.html">
-           <img src="../Images/LatVsMaxTemp.png" alt="AltText" class="img-fluid">
-         </a>
-         </div>
-         <div class="card">
-         <a href="humidity.html">
-           <img src="../Images/LatVsHumidity.png" alt="AltText" class="img-fluid">
-         </a>>
-         </div>
-      </div>
-      <div class="card-group">
-         <div class="card">
-         <a href="cloudiness.html">
-           <img src="../Images/LatVsCloudiness.png" alt="AltText" class="img-fluid">
-         </a>
-         </div>
-         <div class="card">
-         <a href="wind_speed.html">
-           <img src="../Images/LatVsWindSpeed.png" alt="AltText" class="img-fluid">
-         </a>
-         </div>
+  <div class="banner" style="background-color: #444444;">
+  <div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12 padding">
+      <div class="image justify-content-left">
+        <img src="../Images/Index_headerNEW1b.png" class="img-fluid center-block">
       </div>
     </div>
     </div>
   </div>
+  <br><br>
+  <div class="container-fluid h-100">
+    <div class="row justify-content-center align-items-left h-100">
+
+    <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+    <fieldset>
+    <!-- Form Name -->
+    <legend><center><h2><b>Credit Approval Form</b></h2></center></legend><br>
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-lg-12 control-label">Amount of Loan</label>  
+        <div class="col-lg-12 inputGroupContainer">
+          <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+          <input  name="first_name" placeholder="Enter Amount of Loan" class="form-control"  type="text">
+          </div>
+        </div>
+    </div>
+
+    <div class="form-group"> 
+      <label class="col-lg-12 control-label">Checking Acct Bal</label>
+        <div class="col-lg-12 selectContainer">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+            <select name="department" class="form-control selectpicker">
+            <option value="">Select Checking Acct Bal</option>
+            <option>0</option>
+            <option>Less than $200</option>
+            <option >$200 and above</option>
+            </select>
+        </div>
+        </div>
+      </div>    
+
+    <!-- Text input-->
+  
+    <div class="form-group">
+    <label class="col-lg-12 control-label" >Applicant's Age</label> 
+        <div class="col-lg-12 inputGroupContainer">
+          <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+          <input name="last_name" placeholder="Enter Applicant's Age" class="form-control"  type="text">
+          </div>
+        </div>
+    </div>
+    
+  <!-- Text input-->
+  
+    <div class="form-group">
+    <label class="col-lg-12 control-label">Loan Duration</label>  
+      <div class="col-lg-12 inputGroupContainer">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+        <input  name="user_name" placeholder="Enter Loan Duration in Months" class="form-control"  type="text">
+      </div>
+      </div>
+    </div>
+
+    <div class="form-group"> 
+      <label class="col-lg-12 control-label">Credit History</label>
+        <div class="col-lg-12 selectContainer">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+            <select name="department" class="form-control selectpicker">
+            <option value="">Select Credit History</option>
+            <option>No credit history</option>
+            <option>No late payments with W.E.</option>
+            <option >Current with other creditors</option>
+            <option >Any overall late payments</option>
+            <option >Critical account</option>
+            </select>
+        </div>
+        </div>
+      </div>       
+      
+      <div class="form-group"> 
+        <label class="col-lg-12 control-label">Years Employed</label>
+          <div class="col-lg-12 selectContainer">
+          <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+              <select name="department" class="form-control selectpicker">
+              <option value="">Select Years Employed</option>
+              <option>Unemployed</option>
+              <option>Less than 1 yr</option>
+              <option >1 yr to 4 yrs</option>
+              <option >4 yrs to 7 yrs</option>
+              <option >7 yrs plus</option>              </select>
+          </div>
+          </div>
+        </div>     
+
+        <div class="form-group"> 
+          <label class="col-lg-12 control-label">Savings Acct Bal</label>
+            <div class="col-lg-12 selectContainer">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                <select name="department" class="form-control selectpicker">
+                <option value="">Select Savings Acct Bal</option>
+                <option>Less than $100</option>
+                <option>$100 to $400</option>
+                <option >$500 to $1000</option>
+                <option >Greater than $1000</option>
+                <option >No Savings or N/A</option>
+                </select>
+            </div>
+            </div>
+          </div>     
+
+  <!-- Text input-->
+  
+    <div class="form-group">
+    <label class="col-lg-12 control-label" >Install Rate</label> 
+      <div class="col-lg-12 inputGroupContainer">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+        <input name="user_password" placeholder="Enter Install Rate" class="form-control"  type="password">
+      </div>
+      </div>
+    </div>
+
+    <div class="form-group"> 
+      <label class="col-lg-12 control-label">Years of Residency</label>
+        <div class="col-lg-12 selectContainer">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+            <select name="department" class="form-control selectpicker">
+            <option value="">Select Years of Residency</option>
+            <option>Less than 1 yr</option>
+            <option>1 yr to almost 2 yrs</option>
+            <option >2 yrs to almost 3 yrs</option>
+            <option >4 yrs plus</option>
+            </select>
+        </div>
+        </div>
+      </div>     
+    
+      <div class="form-group"> 
+        <label class="col-lg-12 control-label">Type of Job</label>
+          <div class="col-lg-12 selectContainer">
+          <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+              <select name="department" class="form-control selectpicker">
+              <option value="">Select Type of Job</option>
+              <option>Unemployed</option>
+              <option>Unskilled employee</option>
+              <option >Skilled employee</option>
+              <option >Management</option>
+              </select>
+          </div>
+          </div>
+      </div>     
+      <div class="form-group">
+        <label class="col-lg-12 control-label"></label>
+        <div class="col-lg-12"><br>
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button type="submit" class="btn btn-warning" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSUBMIT <span class="glyphicon glyphicon-send"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
+        </div>
+      </div>
+  
+    </fieldset>
+    </form>
+  </div>
+  </div>
+<br><br>
 </body>
 
-</html>
+</html> -->
 
